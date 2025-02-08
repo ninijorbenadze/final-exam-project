@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+        <div class="mb-3">
+            {% for stock in stocks %}
+                <p>Current stock</p>
+                {{ stock.symbol }}
+                <p>Number of share</p>
+                {{ stock.shares }}
+                <p>Price of each stock</p>
+                {{ stock.price }}
+                <p>Holding value</p>
+                {{ stock.holding }}
+            {% endfor %}
+            </div>
+        <div class="mb-3">
+                <p>Current cash balance</p>
+                {{ cash_bal }}
+                <p>Grand total</p>
+                {{ total }}
+       </div>
+
+    
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <h2>Name</h2>
+            <p>{{ name }}</p>
+            <h2>Price</h2>
+            <p>{{ price }}</p>
+            <h2>Symbol</h2>
+            <p>{{ symbol }}</p>
+
+
+
+
+        </div>
+
+        <button class="btn btn-primary" type="submit">Find</button>
+    </form>
+{% endblock %}
